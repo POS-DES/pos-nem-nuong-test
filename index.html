@@ -1901,7 +1901,7 @@ saveIng:()=>$("#in_n")&&$("#in_n").value.trim()?["Nguyên liệu","Lưu "+$("#in
 Object.keys(LW).forEach(k=>{const f=window[k];if(typeof f!=="function")return;window[k]=function(){let t=0;try{t=LW[k].apply(null,arguments)}catch(e){}const r=f.apply(this,arguments);if(t)lg(t[0],t[1]);return r}});
 {const f=window.clock;if(typeof f==="function")window.clock=function(){const s=S.staff.find(x=>x.id===S.me)||S.staff[0],b=s&&S.att.some(x=>x.sid===s.id&&!x.out),r=f.apply(this,arguments),a=s&&S.att.some(x=>x.sid===s.id&&!x.out);if(s&&a!==b)lg("Chấm công",s.name+(a?" vào ca":" ra ca"));return r}}
 /* ===== Đồng bộ Supabase: dữ liệu quán nằm trên máy chủ, tách khỏi phần mềm ===== */
-const SB={url:"https://mlhdkynkkfoxcccpbarq.supabase.co",key:"sb_publishable_JgH-uNqoss1lng6uXaOgLA_i9HfztUd",code:"quan-test-001"};
+const SB={url:"https://mlhdkynkkfoxcccpbarq.supabase.co",key:"sb_publishable_JgH-uNqoss1lng6uXaOgLA_i9HfztUd",code:"quan-test-a060e125740f6c305d1f24ef83af3445"};
 const SYK="postest_sync",_save=save;
 let SY=(()=>{try{return JSON.parse(localStorage.getItem(SYK))}catch(e){}})()||{};
 SY.on=!!SY.on;SY.code=SY.code||"";SY.gone=SY.gone||[];if(!SY.dev)SY.dev=Math.random().toString(36).slice(2,10);
